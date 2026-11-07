@@ -1,10 +1,13 @@
-# Emotion Classification from Text — Phase 1: Data Cleaning, EDA and Preprocessing
+# VoxAid: Sentiment Analysis 
+## Phase 1: Data Cleaning, EDA and Preprocessing
 
 ## Project description
-This project classifies short English texts (tweets) into one of six emotions: **anger, fear, joy, love, sadness, surprise**. Phase 1 covers all the work on the data before modelling: cleaning, exploratory data analysis (EDA), insights and preprocessing/scaling. Phase 2 will build the ML, deep learning and transformer models on top of the files produced here.
+VoxAid is an AI-powered, speech-to-speech emotional support system. The user speaks, the speech is converted to text, the emotion in it is recognised, a Large Language Model (LLM) writes an empathetic reply, and the reply is spoken back with text-to-speech. 
+
+The emotion recognition part of VoxAid needs a text emotion classifier. This repository covers **Phase 1** of that part: all the work on the emotion dataset before modelling (cleaning, exploratory data analysis, insights and preprocessing/scaling). In Phase 2 we will train and compare ML, deep learning and transformer models on the files produced here.
 
 ## Problem statement
-Given a short text, predict the emotion it expresses (single-label, 6-class text classification). In this phase we want to answer: is the data clean and trustworthy, how are the classes distributed, how long are the texts, which words belong to which emotion, and how should the text be converted to numbers without data leakage?
+Given a short text, predict which of six emotions it expresses: **anger, fear, joy, love, sadness or surprise** (single-label, 6-class text classification). The predicted emotion is later passed, together with the conversation, to the LLM so that its reply fits how the user feels. In this phase we want to answer: is the data clean and trustworthy, how are the classes distributed, how long are the texts, which words belong to which emotion, and how should the text be converted to numbers without data leakage?
 
 ## Dataset
 | | |
@@ -16,7 +19,9 @@ Given a short text, predict the emotion it expresses (single-label, 6-class text
 | **Features** | `text` (the tweet). From it we created 5 numeric features: character count, word count, average word length, unique-word ratio and stop-word ratio |
 | **Target variable** | `label`, one of the 6 emotions |
 
-The raw files are small (about 2 MB), so they are included in `data/raw/`. The download links above can be used to get the original dataset.
+The raw files are small, so they are included in `data/raw/`. The download links above can be used to get the original dataset.
+
+The proposal also mentions GoEmotions (text) and RAVDESS (speech) as datasets under consideration. This Phase 1 uses only the six-emotion text dataset above; the speech data is not part of this phase.
 
 ## Repository structure
 ```
@@ -80,8 +85,10 @@ Cleaning did not change the class distribution (the share of each class in train
 
 ### What this means for Phase 2
 - Use class weights and report macro-F1 and per-class results.
-- Use TF-IDF with unigrams and bigrams for the ML models.
-- Use a vocabulary of 10,000 words and a maximum length of 52 tokens for the deep learning models.
+- Use TF-IDF with unigrams and bigrams for the ML baselines (Logistic Regression, Random Forest).
+- Use a vocabulary of 10,000 words and a maximum length of 52 tokens for the deep learning models (feedforward network, LSTM).
+- For the transformer models (BERT, DistilBERT, RoBERTa) use the original cleaned text with the model's own tokenizer, with a maximum length around 52 tokens. TF-IDF and the stop-word-free text are not needed for them.
+- Compare all models with accuracy, precision, recall and F1-score, as planned in the proposal.
 - Remove stop words for TF-IDF but keep negations (not, no, never), and keep the original text for the neural networks.
 
 ## Normalisation and scaling (notebook 03)
