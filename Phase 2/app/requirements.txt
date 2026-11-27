@@ -1,0 +1,9 @@
+streamlit>=1.40
+scikit-learn==1.7.2
+numpy
+pandas
+joblib
+SpeechRecognition>=3.10
+gTTS>=2.5
+standard-aifc; python_version >= "3.13"
+audioop-lts; python_version >= "3.13"
