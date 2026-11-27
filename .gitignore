@@ -4,3 +4,37 @@ __pycache__/
 .DS_Store
 *.zip
 Untitled*.ipynb
+# --- Python environment ---
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- secrets (the project needs no API keys, but never commit these) ---
+.env
+.streamlit/secrets.toml
+
+# --- Jupyter checkpoints ---
+.ipynb_checkpoints/
+
+# --- Raw data (Phase 1 outputs in data/processed/ ARE committed) ---
+data/*.csv
+data/raw/
+
+# --- Large model files (recreated by running the notebooks) ---
+models/ml/random_forest.joblib
+models/transformer/
+
+# --- System / IDE files ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+
+VOXAid-Project-final/
+checkpoints/
+*.safetensors
+training_args.bin
