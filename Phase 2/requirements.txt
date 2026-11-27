@@ -1,0 +1,33 @@
+# Full environment: notebooks + web app (tested with Python 3.11)
+# Install: pip install -r requirements.txt
+
+# --- data & classical ML ---
+numpy
+pandas
+scipy
+# pinned: the Phase 1 TF-IDF vectorizer and the saved models are pickled with this version
+scikit-learn==1.7.2
+joblib
+matplotlib
+seaborn
+jinja2              # pandas table styling in the notebooks
+
+# --- notebooks ---
+jupyter
+ipykernel
+
+# --- deep learning (classification_DL.ipynb) ---
+tensorflow>=2.16    # includes Keras 3
+
+# --- transformer (transformer.ipynb) ---
+torch
+transformers>=4.41
+datasets
+accelerate>=0.26
+
+# --- web app (app/app.py) ---
+streamlit>=1.40     # st.audio_input needs 1.40+
+SpeechRecognition>=3.10
+gTTS>=2.5
+standard-aifc; python_version >= "3.13"   # SpeechRecognition on Python 3.13+
+audioop-lts; python_version >= "3.13"
