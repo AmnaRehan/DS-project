@@ -1,0 +1,18 @@
+{
+  "input": "text_ml (see app/voxaid_core.py: clean_text + to_ml_text)",
+  "classes": [
+    "anger",
+    "fear",
+    "joy",
+    "love",
+    "sadness",
+    "surprise"
+  ],
+  "sklearn_version": "1.7.2",
+  "models": {
+    "Logistic Regression": "logistic_regression",
+    "Linear SVM": "linear_svm",
+    "Naive Bayes": "naive_bayes",
+    "Random Forest": "random_forest"
+  }
+}
