@@ -2,7 +2,7 @@
 
 VoxAid listens to what you say, works out the emotion behind your words, shows it, and answers with one or two comforting sentences, which it also speaks back to you.
 
-**🌐 Live app:** _add your Streamlit Community Cloud link here_
+**🌐 Live app:** 
 
 ```
  🎤 voice ──► speech-to-text ──► text cleaning ──► emotion model ──► reply (1-2 comforting sentences) ──► 🔊 text-to-speech
@@ -64,9 +64,9 @@ Test set, 2,000 sentences. *The DL and transformer rows are filled in after runn
 | Random Forest | Classical ML | 0.884 | 0.847 | 0.886 | 0.716 |
 | LR baseline (no weights, first version) | Classical ML | 0.895 | 0.841 | 0.892 | 0.679 |
 | Naive Bayes | Classical ML | 0.880 | 0.832 | 0.882 | 0.652 |
-| Feedforward NN | Deep learning | _run notebook_ | | | |
-| BiLSTM | Deep learning | _run notebook_ | | | |
-| DistilBERT | Transformer | _run notebook_ | | | |
+| Feedforward NN | Deep learning | 0.875 | 0.835 | 0.878 | 0.695 |
+| BiLSTM | Deep learning | 0.902 | 0.869 | 0.904 | 0.792 |
+| DistilBERT | Transformer | 0.931 | 0.884 | 0.930 | 0.709 |
 
 ![ML comparison](plots/ml/ml_model_comparison.png)
 
