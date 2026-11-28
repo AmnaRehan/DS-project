@@ -1,0 +1,5 @@
+{
+  "display_prefix": "DistilBERT",
+  "macro_f1": 0.8841857362022635,
+  "accuracy": 0.9305
+}
