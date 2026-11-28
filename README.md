@@ -1,6 +1,6 @@
 # 🎙️ VoxAid: Speech Emotion Support Assistant
 
-**Live website:** 
+**Live website:**  https://voxaid-ai.streamlit.app/
 
 VoxAid listens to what you say (or reads what you type), detects the emotion in your words, shows it, and replies with one or two comforting sentences that it can also speak aloud.
 
