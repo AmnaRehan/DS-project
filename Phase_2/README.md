@@ -2,7 +2,7 @@
 
 VoxAid listens to what you say, works out the emotion behind your words, shows it, and answers with one or two comforting sentences, which it also speaks back to you.
 
-**🌐 Live app:** 
+**🌐 Live app:**  https://voxaid-ai.streamlit.app/
 
 ```
  🎤 voice ──► speech-to-text ──► text cleaning ──► emotion model ──► reply (1-2 comforting sentences) ──► 🔊 text-to-speech
